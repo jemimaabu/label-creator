@@ -141,9 +141,7 @@ main {
       margin-right: 0;
     }
 
-    #label-name-container, 
-    #label-description-container,
-    #label-color-container {
-        width: 100%;
+    #create-label {
+        height: auto;
     }
 }
