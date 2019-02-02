@@ -1,0 +1,149 @@
+main {
+    padding: 1em;
+    width: 75%;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#error {
+    color: #902100;
+    opacity: 1;
+    padding: 0.5em;
+    transition: opacity .5s;
+}
+
+#error:empty {
+    padding: 0em;
+    opacity: 0;
+}
+
+#new-label-container {
+    border: 1px solid #e7e7e7;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    padding: 1em;
+}
+  
+#label-preview, .display-label {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 0.3em 0.5em;
+}
+
+#label-preview-text, .display-label-text {
+    background: inherit;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    filter: invert(1) grayscale(1) contrast(20);
+    font-weight: 600;
+}
+  
+#label-input-container {
+    margin-top: 1em;
+    display: grid;
+    grid-template-columns: 20fr 35fr 30fr 15fr;
+    grid-gap: 1em;
+    align-items: end;
+}
+  
+.input-container {
+    display: grid;
+    grid-template-areas: 
+      "label"
+      "input";
+}
+  
+.input-container label {
+    grid-area: label;
+    margin-bottom: .5em;
+}
+  
+.input-container input {
+    grid-area: input;
+    padding: 0.3em;
+}
+  
+.input-container button {
+    grid-area: button;
+}
+
+#label-color-container {
+    grid-template-areas: 
+      "label label"
+      "input button";
+}
+
+#create-label {
+    padding: 0.3em 0.5em;
+    height: fit-content;
+}
+
+#display-labels-table {
+    border-radius: 5px;
+    margin-top: 1em;
+}
+
+#display-labels-table table {
+    width: 100%;
+    border: 1px solid #eaeaea;
+    border-radius: 5px 5px 0 0;
+    border-collapse: collapse;
+}
+
+#display-labels-table thead {
+    background-color: #f9f9f9;
+    padding: 1em;
+    text-align: left;
+    font-weight: normal;
+}
+
+#display-labels-table tr{
+    border-bottom: 1px solid #eaeaea;
+    border-top: 1px solid #eaeaea;
+}
+
+#display-labels-table th{
+    padding: 1em;
+    font-weight: normal;
+}
+
+#display-labels-table td {
+    padding: 0.5em 1em;
+}
+
+.display-label-cell {
+    width: 25%;
+    word-break: break-all;
+}
+
+.display-description-cell {
+    width: 50%;
+    word-break: break-all;
+}
+
+.delete-cell {
+    width: 25%;
+    text-align: right;
+}
+
+@media (max-width: 920px) {
+    main {
+        width: 95%;
+    }
+
+    #label-input-container {
+      display: block;
+    }
+    
+    .input-container {
+      margin-bottom: 1em;
+      margin-right: 0;
+    }
+
+    #label-name-container, 
+    #label-description-container,
+    #label-color-container {
+        width: 100%;
+    }
+}
